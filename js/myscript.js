@@ -11,15 +11,24 @@ console.log(richiesta);
 
 var emailTrovata = false;
 
-for (var i = 0; i < email.length; i++) {
+// for (var i = 0; i < email.length; i++) {
+//   console.log(i);
+//   var compilazione = email[i];
+//   // condizione mail corretta o errata
+//   if (compilazione === richiesta) {
+//     emailTrovata = true;
+//   }
+// }
+
+var i = 0;
+while (i < email.length && emailTrovata === false) {
+  console.log(i);
   var compilazione = email[i];
   // condizione mail corretta o errata
   if (compilazione === richiesta) {
     emailTrovata = true;
-  //   console.log("Benvenuto!");
-  // } else {
-  //   console.log("Accesso negato");
   }
+  i++;
 }
 
 if (emailTrovata === true) {
